@@ -1,0 +1,231 @@
+\documentclass[11pt, a4paper]{article}
+
+% ---------- Packages ----------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage[round]{natbib}
+\usepackage{siunitx}
+\usepackage{float}
+\usepackage{fancyhdr}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=blue,
+    urlcolor=blue
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\nouppercase{\leftmark}}
+\fancyfoot[C]{\thepage}
+
+% ---------- Title information ----------
+\title{Effects of Short-Term Sleep Deprivation on Working Memory Recall}
+\author{
+    Jordan Reyes\thanks{Corresponding author: \texttt{j.reyes@example.edu}} \\
+    Department of Cognitive Science, Example University
+    \and
+    Priya Nandakumar \\
+    Department of Cognitive Science, Example University
+}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Sleep loss is widely reported to impair cognitive performance, but the
+magnitude of its effect on working memory specifically remains debated. We
+tested 32 healthy adults on a digit-span recall task under two conditions:
+a normal-sleep night (\qty{7}{}--\qty{9}{} hours) and a restricted-sleep
+night (\qty{4}{} hours), using a within-subjects, counterbalanced design.
+Participants in the restricted-sleep condition recalled significantly
+fewer digits on average ($M = 5.8$, $SD = 1.1$) than in the normal-sleep
+condition ($M = 7.2$, $SD = 1.3$), $t(31) = 6.42$, $p < 0.001$, Cohen's
+$d = 1.13$. These results support the hypothesis that even a single night
+of restricted sleep produces a measurable, moderate-to-large impairment in
+working memory recall. We discuss implications for shift workers and
+students, and note limitations related to sample size and self-reported
+sleep compliance.
+\end{abstract}
+
+\noindent\textbf{Keywords:} sleep deprivation, working memory, cognitive
+performance, digit span, within-subjects design
+
+\tableofcontents
+\newpage
+
+% ---------- Introduction ----------
+\section{Introduction}
+\label{sec:introduction}
+
+Working memory -- the capacity to hold and manipulate information over
+short intervals -- underlies everyday tasks ranging from mental arithmetic
+to following multi-step instructions. Prior research has linked sleep loss
+to broad declines in attention and reaction time \citep{killgore2010}, but
+findings on working memory specifically have been mixed, with effect sizes
+ranging from negligible to large depending on task design and the degree
+of sleep restriction \citep{lowe2017}.
+
+This report addresses a narrower question: does a single night of
+moderate sleep restriction (4 hours) measurably impair performance on a
+standard digit-span recall task, relative to a normal night of sleep, in
+healthy young adults? We hypothesized that restricted sleep would reduce
+mean digit-span recall relative to the normal-sleep condition.
+
+The remainder of this report is organized as follows.
+Section~\ref{sec:related-work} reviews related work.
+Section~\ref{sec:methods} describes the experimental design and analysis.
+Section~\ref{sec:results} presents the results.
+Section~\ref{sec:discussion} interprets the findings and their
+limitations, and Section~\ref{sec:conclusion} concludes.
+
+% ---------- Related Work ----------
+\section{Related Work}
+\label{sec:related-work}
+
+\citet{killgore2010} reviewed evidence that sleep deprivation degrades
+attention, reaction time, and higher-order decision making, but noted that
+working-memory-specific effects were less consistently reported across
+studies, in part due to differing task demands. \citet{lowe2017} conducted
+a meta-analysis of 60 studies and found a small-to-moderate pooled effect
+of total sleep deprivation on working memory tasks ($g \approx 0.35$),
+with larger effects for partial sleep restriction protocols closer to the
+one used here. Our study extends this literature with a controlled,
+within-subjects comparison using a single restriction night rather than
+total deprivation, which is more representative of common real-world sleep
+loss (e.g., exam periods, shift work transitions).
+
+% ---------- Methods ----------
+\section{Methods}
+\label{sec:methods}
+
+\subsection{Participants}
+Thirty-two healthy adults (18 female, 14 male; age $M = 22.4$,
+$SD = 2.7$) with no reported sleep disorders were recruited from the
+university community. All participants provided informed consent, and the
+protocol was approved by the university's institutional review board.
+
+\subsection{Experimental Setup}
+A within-subjects, counterbalanced design was used. Each participant
+completed the digit-span recall task twice, one week apart: once after a
+normal-sleep night (self-reported \qty{7}{}--\qty{9}{} hours, verified by
+wrist actigraphy) and once after a restricted-sleep night (sleep window
+capped at \qty{4}{} hours, also verified by actigraphy). Condition order
+was counterbalanced across participants. The task itself was administered
+each morning between 9:00 and 10:00 to control for time-of-day effects.
+
+\subsection{Data Analysis}
+The primary outcome was the longest correctly recalled digit sequence,
+averaged across 10 trials per session. We modeled the difference between
+conditions with a paired-samples $t$-test. The within-subject effect can
+be summarized as
+\begin{equation}
+    \label{eq:diff}
+    d_i = y_i^{\text{normal}} - y_i^{\text{restricted}}
+\end{equation}
+where $y_i^{\text{normal}}$ and $y_i^{\text{restricted}}$ are participant
+$i$'s mean recall scores in the normal- and restricted-sleep conditions,
+respectively, and $d_i$ is the within-subject difference used in the
+paired $t$-test.
+
+% ---------- Results ----------
+\section{Results}
+\label{sec:results}
+
+Mean digit-span recall was lower in the restricted-sleep condition
+($M = 5.8$, $SD = 1.1$) than in the normal-sleep condition ($M = 7.2$,
+$SD = 1.3$). The paired-samples $t$-test confirmed this difference was
+statistically significant, $t(31) = 6.42$, $p < 0.001$, with a large
+effect size (Cohen's $d = 1.13$). Table~\ref{tab:results} summarizes the
+descriptive statistics, and Figure~\ref{fig:recall} shows the
+distribution of individual differences.
+
+\begin{figure}[H]
+    \centering
+    % \includegraphics[width=0.7\textwidth]{figures/recall-difference.pdf}
+    \caption{Distribution of within-subject differences in digit-span
+    recall (normal sleep minus restricted sleep) across 32 participants.
+    Positive values indicate better recall under normal sleep. The
+    distribution is shifted right of zero, consistent with the observed
+    group-level effect.}
+    \label{fig:recall}
+\end{figure}
+
+\begin{table}[H]
+    \centering
+    \caption{Descriptive statistics for digit-span recall by condition.}
+    \label{tab:results}
+    \begin{tabular}{lccc}
+        \toprule
+        Condition        & Mean & SD  & $n$ \\
+        \midrule
+        Normal sleep     & 7.2  & 1.3 & 32  \\
+        Restricted sleep & 5.8  & 1.1 & 32  \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+No significant effect of condition order was found ($p = 0.41$),
+suggesting the counterbalancing successfully controlled for practice
+effects.
+
+% ---------- Discussion ----------
+\section{Discussion}
+\label{sec:discussion}
+
+The observed drop of roughly 1.4 digits between conditions is consistent
+with the moderate-to-large effects reported for partial sleep restriction
+in \citet{lowe2017}, and supports the hypothesis that even a single night
+of reduced sleep meaningfully impairs working memory recall. Practically,
+a difference of this size could affect performance on tasks that place
+heavy demands on short-term retention, such as mental arithmetic,
+multi-step procedures, or exam recall.
+
+Several limitations should be noted. The sample was drawn from a single
+university population, limiting generalizability to other age groups or
+occupational settings (e.g., shift workers with chronic partial sleep
+restriction). Sleep was restricted under laboratory instructions rather
+than occurring naturally, which may not fully capture the psychological
+and physiological profile of real-world sleep loss. Finally, only one
+cognitive measure (digit span) was used; broader working-memory batteries
+would strengthen the generality of the conclusion.
+
+% ---------- Conclusion ----------
+\section{Conclusion}
+\label{sec:conclusion}
+
+A single night of sleep restricted to 4 hours produced a statistically
+significant and practically meaningful reduction in working memory recall
+relative to a normal night of sleep, in a sample of healthy young adults.
+Future work should extend this design to repeated nights of partial sleep
+restriction and to broader working-memory tasks to assess how the effect
+accumulates and generalizes.
+
+% ---------- Acknowledgments ----------
+\section*{Acknowledgments}
+We thank the volunteers who participated in this study and the university
+sleep laboratory staff for their assistance with actigraphy monitoring.
+
+% ---------- Bibliography ----------
+\bibliographystyle{plainnat}
+\bibliography{model_references}
+
+% ---------- Appendix ----------
+\appendix
+\section{Supplementary Material}
+\label{sec:appendix}
+
+Raw per-participant recall scores and actigraphy logs are available from
+the corresponding author upon request.
+
+\end{document}
