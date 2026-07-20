@@ -1,0 +1,154 @@
+\documentclass[11pt, a4paper]{article}
+
+% ---------- Packages ----------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage[round]{natbib}
+\usepackage{siunitx}
+\usepackage{float}
+\usepackage{fancyhdr}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=blue,
+    urlcolor=blue
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\nouppercase{\leftmark}}
+\fancyfoot[C]{\thepage}
+
+% ---------- Title information ----------
+\title{Report Title}
+\author{
+    First Author\thanks{Corresponding author: \texttt{author@example.com}} \\
+    Department, Institution
+    \and
+    Second Author \\
+    Department, Institution
+}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Summarize the motivation, methods, key results, and conclusions of the
+report in 150--250 words. The abstract should be self-contained and
+understandable without reading the rest of the document.
+\end{abstract}
+
+\noindent\textbf{Keywords:} keyword one, keyword two, keyword three
+
+\tableofcontents
+\newpage
+
+% ---------- Introduction ----------
+\section{Introduction}
+\label{sec:introduction}
+
+State the problem, its significance, and the goal of this report. Summarize
+prior work and clearly identify the gap this report addresses. End the
+section with an outline of the remaining sections.
+
+% ---------- Related Work ----------
+\section{Related Work}
+\label{sec:related-work}
+
+Discuss relevant prior studies and how the present work relates to or
+differs from them \citep{example2024}.
+
+% ---------- Methods ----------
+\section{Methods}
+\label{sec:methods}
+
+Describe the materials, experimental setup, data sources, and analytical or
+computational methods used. Provide enough detail for reproducibility.
+
+\subsection{Experimental Setup}
+Describe the apparatus, dataset, or system configuration.
+
+\subsection{Data Analysis}
+Describe statistical tests, models, or algorithms applied to the data.
+For example, a variable may be defined as:
+\begin{equation}
+    \label{eq:example}
+    y = f(x) = \beta_0 + \beta_1 x + \varepsilon
+\end{equation}
+where $\beta_0$ and $\beta_1$ are coefficients and $\varepsilon$ is the
+error term.
+
+% ---------- Results ----------
+\section{Results}
+\label{sec:results}
+
+Present the findings using figures and tables. Report quantitative results
+with appropriate units and uncertainty.
+
+\begin{figure}[H]
+    \centering
+    % \includegraphics[width=0.8\textwidth]{figures/example-figure.pdf}
+    \caption{Description of the figure, including axes, units, and what
+    the reader should take away.}
+    \label{fig:example}
+\end{figure}
+
+\begin{table}[H]
+    \centering
+    \caption{Summary of results.}
+    \label{tab:example}
+    \begin{tabular}{lcc}
+        \toprule
+        Condition & Metric A & Metric B \\
+        \midrule
+        Baseline  & 0.00     & 0.00     \\
+        Treatment & 0.00     & 0.00     \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Reference results explicitly, e.g., as shown in Figure~\ref{fig:example}
+and Table~\ref{tab:example}, and in Equation~\ref{eq:example}.
+
+% ---------- Discussion ----------
+\section{Discussion}
+\label{sec:discussion}
+
+Interpret the results in the context of the stated goal and related work.
+Discuss limitations, potential sources of error, and alternative
+explanations.
+
+% ---------- Conclusion ----------
+\section{Conclusion}
+\label{sec:conclusion}
+
+Summarize the main findings and their implications. Suggest directions for
+future work.
+
+% ---------- Acknowledgments ----------
+\section*{Acknowledgments}
+Acknowledge funding sources, contributors, and any assistance received.
+
+% ---------- Bibliography ----------
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+% ---------- Appendix ----------
+\appendix
+\section{Supplementary Material}
+\label{sec:appendix}
+
+Include supplementary derivations, additional figures/tables, or raw data
+summaries here.
+
+\end{document}
